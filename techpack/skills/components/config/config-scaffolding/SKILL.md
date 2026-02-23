@@ -199,13 +199,13 @@ The config component uses the engine for base template structure, but config sec
 ### Base structure via engine
 
 ```bash
-<plugin-root>/fullstack-typescript/system/system-run.sh scaffolding apply --spec spec.json
+<techpack-root>/system/system-run.sh scaffolding apply --spec spec.json
 ```
 
 ```json
 {
   "target_dir": "<project-root>",
-  "base_dir": "<plugin-root>/skills",
+  "base_dir": "<techpack-root>/skills",
   "variables": { "PROJECT_NAME": "<project-name>" },
   "operations": [
     {

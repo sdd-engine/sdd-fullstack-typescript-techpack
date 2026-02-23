@@ -184,7 +184,7 @@ The ConfigMap is mounted in deployments and `SDD_CONFIG_PATH` is set automatical
 Deployment workflow:
 ```bash
 # Generate merged config
-<plugin-root>/fullstack-typescript/system/system-run.sh config generate --env production --component main-server \
+<techpack-root>/system/system-run.sh config generate --env production --component main-server \
   --output production-config.yaml
 
 # Deploy with config
@@ -219,7 +219,7 @@ Cluster-level observability (Victoria Metrics, Victoria Logs) is set up separate
 To scaffold a Helm chart, build a spec with context flags derived from helm + server settings and invoke the engine:
 
 ```bash
-<plugin-root>/fullstack-typescript/system/system-run.sh scaffolding apply --spec spec.json
+<techpack-root>/system/system-run.sh scaffolding apply --spec spec.json
 ```
 
 ### Variables
@@ -256,7 +256,7 @@ See the full Helm chart spec example in the task description. Each template file
 ```json
 {
   "target_dir": "<project-root>",
-  "base_dir": "<plugin-root>/skills",
+  "base_dir": "<techpack-root>/skills",
   "variables": { "CHART_NAME": "<chart-name>", "..." : "..." },
   "context": {
     "is_hybrid": false,

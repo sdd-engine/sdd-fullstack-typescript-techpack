@@ -217,7 +217,7 @@ background-worker:
 To scaffold a backend component, build a spec with context flags derived from settings and invoke the engine:
 
 ```bash
-<plugin-root>/fullstack-typescript/system/system-run.sh scaffolding apply --spec spec.json
+<techpack-root>/system/system-run.sh scaffolding apply --spec spec.json
 ```
 
 ### Variables
@@ -241,7 +241,7 @@ To scaffold a backend component, build a spec with context flags derived from se
 ```json
 {
   "target_dir": "<project-root>",
-  "base_dir": "<plugin-root>/skills",
+  "base_dir": "<techpack-root>/skills",
   "variables": {
     "PROJECT_NAME": "<project-name>",
     "SERVER_NAME": "<server-name>",

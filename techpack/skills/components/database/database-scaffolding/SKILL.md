@@ -41,13 +41,13 @@ Use when your project needs:
 After scaffolding, database operations are performed via the system CLI:
 
 ```bash
-<plugin-root>/fullstack-typescript/system/system-run.sh database setup <component-name>
-<plugin-root>/fullstack-typescript/system/system-run.sh database teardown <component-name>
-<plugin-root>/fullstack-typescript/system/system-run.sh database migrate <component-name>
-<plugin-root>/fullstack-typescript/system/system-run.sh database seed <component-name>
-<plugin-root>/fullstack-typescript/system/system-run.sh database reset <component-name>
-<plugin-root>/fullstack-typescript/system/system-run.sh database port-forward <component-name>
-<plugin-root>/fullstack-typescript/system/system-run.sh database psql <component-name>
+<techpack-root>/system/system-run.sh database setup <component-name>
+<techpack-root>/system/system-run.sh database teardown <component-name>
+<techpack-root>/system/system-run.sh database migrate <component-name>
+<techpack-root>/system/system-run.sh database seed <component-name>
+<techpack-root>/system/system-run.sh database reset <component-name>
+<techpack-root>/system/system-run.sh database port-forward <component-name>
+<techpack-root>/system/system-run.sh database psql <component-name>
 ```
 
 ## Prerequisites
@@ -163,7 +163,7 @@ export type DatabaseConfig = Readonly<{
 To scaffold a database component, build a spec and invoke the engine:
 
 ```bash
-<plugin-root>/fullstack-typescript/system/system-run.sh scaffolding apply --spec spec.json
+<techpack-root>/system/system-run.sh scaffolding apply --spec spec.json
 ```
 
 ### Variables
@@ -177,7 +177,7 @@ To scaffold a database component, build a spec and invoke the engine:
 ```json
 {
   "target_dir": "<project-root>",
-  "base_dir": "<plugin-root>/skills",
+  "base_dir": "<techpack-root>/skills",
   "variables": { "PROJECT_NAME": "<project-name>" },
   "operations": [
     {

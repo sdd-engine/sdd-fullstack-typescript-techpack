@@ -92,26 +92,26 @@ Use the system CLI to manage local Kubernetes environments:
 
 ```bash
 # Create local cluster with observability stack
-<plugin-root>/fullstack-typescript/system/system-run.sh env create
+<techpack-root>/system/system-run.sh env create
 
 # Deploy full application stack (databases, migrations, helm charts)
-<plugin-root>/fullstack-typescript/system/system-run.sh env deploy
+<techpack-root>/system/system-run.sh env deploy
 
 # Start port forwards for local access
-<plugin-root>/fullstack-typescript/system/system-run.sh env forward
+<techpack-root>/system/system-run.sh env forward
 
 # Check status
-<plugin-root>/fullstack-typescript/system/system-run.sh env status
+<techpack-root>/system/system-run.sh env status
 
 # Hybrid development: exclude a service to run locally
-<plugin-root>/fullstack-typescript/system/system-run.sh env deploy --exclude=main-server-api
-<plugin-root>/fullstack-typescript/system/system-run.sh env forward
+<techpack-root>/system/system-run.sh env deploy --exclude=main-server-api
+<techpack-root>/system/system-run.sh env forward
 cd components/servers/main-server && npm run dev
 
 # Lifecycle management
-<plugin-root>/fullstack-typescript/system/system-run.sh env stop     # Pause (preserves state)
-<plugin-root>/fullstack-typescript/system/system-run.sh env start    # Resume
-<plugin-root>/fullstack-typescript/system/system-run.sh env destroy  # Full cleanup
+<techpack-root>/system/system-run.sh env stop     # Pause (preserves state)
+<techpack-root>/system/system-run.sh env start    # Resume
+<techpack-root>/system/system-run.sh env destroy  # Full cleanup
 ```
 
 The deploy command reads `sdd/sdd-settings.yaml` to:

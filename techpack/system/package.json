@@ -1,6 +1,6 @@
 {
   "name": "@sdd/fs-ts-system",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "main": "dist/cli.js",

@@ -40,8 +40,8 @@ Note: Health check endpoints (`/health`, `/readiness`, `/liveness`) are NOT defi
 The contract component generates TypeScript types from the OpenAPI spec via the system CLI:
 
 ```bash
-<plugin-root>/fullstack-typescript/system/system-run.sh contract generate-types <component-name>
-<plugin-root>/fullstack-typescript/system/system-run.sh contract validate <component-name>
+<techpack-root>/system/system-run.sh contract generate-types <component-name>
+<techpack-root>/system/system-run.sh contract validate <component-name>
 ```
 
 This creates `generated/api-types.ts` inside the contract component. The contract is published as a workspace package — server and webapp components consume types by declaring a workspace dependency and importing:
@@ -78,7 +78,7 @@ skills/components/contract/contract-scaffolding/templates/
 To scaffold a contract component, build a spec and invoke the engine:
 
 ```bash
-<plugin-root>/fullstack-typescript/system/system-run.sh scaffolding apply --spec spec.json
+<techpack-root>/system/system-run.sh scaffolding apply --spec spec.json
 ```
 
 ### Variables
@@ -92,7 +92,7 @@ To scaffold a contract component, build a spec and invoke the engine:
 ```json
 {
   "target_dir": "<project-root>",
-  "base_dir": "<plugin-root>/skills",
+  "base_dir": "<techpack-root>/skills",
   "variables": { "PROJECT_NAME": "<project-name>" },
   "operations": [
     {

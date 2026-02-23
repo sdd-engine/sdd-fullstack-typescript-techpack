@@ -15,28 +15,31 @@ export type SddConfig = {
 }
 
 /**
- * Get the plugin root directory from environment or derive from current file.
+ * Get the techpack root directory from environment or derive from current file.
  */
-export const getPluginRoot = (): string => {
-  // First check environment variable
-  const envRoot = process.env['CLAUDE_PLUGIN_ROOT'];
+export const getTechpackRoot = (): string => {
+  // First check environment variable (set by SDD core when invoking techpack CLI)
+  const envRoot = process.env['SDD_TECHPACK_ROOT'] ?? process.env['CLAUDE_PLUGIN_ROOT'];
   if (envRoot) {
     return envRoot;
   }
 
-  // Derive from this file's location: plugin/system/src/lib/config.ts -> plugin/
-  // In dist: plugin/system/dist/lib/config.js -> plugin/
+  // Derive from this file's location: techpack/system/src/lib/config.ts -> techpack/
+  // In dist: techpack/system/dist/lib/config.js -> techpack/
   const currentDir = path.dirname(new URL(import.meta.url).pathname);
 
-  // Go up from src/lib or dist/lib to plugin/
+  // Go up from src/lib or dist/lib to techpack/
   return path.resolve(currentDir, '..', '..', '..');
 };
+
+/** @deprecated Use getTechpackRoot() instead */
+export const getPluginRoot = getTechpackRoot;
 
 /**
  * Get the skills directory.
  */
 export const getSkillsDir = (): string => {
-  return path.join(getPluginRoot(), 'skills');
+  return path.join(getTechpackRoot(), 'skills');
 };
 
 /**

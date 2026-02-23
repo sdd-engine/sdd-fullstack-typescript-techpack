@@ -96,6 +96,5 @@ Strategic agents handle decisions that require deep analysis and affect the whol
 
 ## Next Steps
 
-- [Getting Started](getting-started.md) - See agents in action
-- [Workflows](workflows.md) - How agents work together
-- [Commands](commands.md) - Commands that orchestrate agents
+- [Components](components.md) - Component types these agents work with
+- [Configuration Guide](config-guide.md) - Configuration patterns

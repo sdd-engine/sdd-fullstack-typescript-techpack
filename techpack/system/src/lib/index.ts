@@ -1,7 +1,7 @@
 export { parseArgs, parseNamedArgs, outputResult } from './args';
 export type { GlobalOptions, ParsedArgs, CommandResult } from './args';
 
-export { loadProjectConfig, findProjectRoot, getPluginRoot, getSkillsDir } from './config';
+export { loadProjectConfig, findProjectRoot, getTechpackRoot, getPluginRoot, getSkillsDir } from './config';
 export type { SddConfig, ConfigResult, ProjectRootResult } from './config';
 
 export { exists, isDirectory, isFile, walkDir, readText, readJson, writeText, writeJson, copyFile, ensureDir, relativePath, joinPath, dirname, basename, extname } from './fs';

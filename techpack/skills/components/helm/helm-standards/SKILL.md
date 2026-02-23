@@ -252,7 +252,7 @@ Config is injected into HTML at deploy time:
 
 ```bash
 # Generate config for production environment
-<plugin-root>/fullstack-typescript/system/system-run.sh config generate --env production --component main-server \
+<techpack-root>/system/system-run.sh config generate --env production --component main-server \
   --output helm-values-config.yaml
 
 # Deploy with config
