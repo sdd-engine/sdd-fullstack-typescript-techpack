@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "workspaces": ["techpack/system"],
+  "scripts": {
+    "build": "npm run build -w @sdd/fs-ts-system",
+    "typecheck": "npm run typecheck -w @sdd/fs-ts-system"
+  }
+}

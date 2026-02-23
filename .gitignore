@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Dependencies
+**/node_modules/
+
+# Build output
+techpack/system/dist/
+
+# Claude temp files
+.temp/
+
+# Release artifacts
+release/
