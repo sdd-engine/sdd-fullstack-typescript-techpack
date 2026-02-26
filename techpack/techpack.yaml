@@ -435,3 +435,10 @@ commands:
       infra:
         description: "Manage infrastructure components (ingress, cert-manager)"
         public: true
+
+  check-prerequisites:
+    handler: system
+    actions:
+      run:
+        description: "Verify required tools and prerequisites are installed (node, npm, git, kubectl, helm)"
+        public: true
